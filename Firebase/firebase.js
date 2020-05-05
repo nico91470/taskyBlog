@@ -11,8 +11,15 @@ const Firebase = {
     todos: () => {
         return db.collection('todos')
     },
-    addTodos: (tache) => {
-        return db.collection('todos').add({ tache })
+    addTodos: (tache, categorie) => {
+        return db.collection('todos').add(
+            {
+                tache,
+                categorie: db.doc('categorie/' + categorie)
+            })
+    },
+    categories: () => {
+        return db.collection('Categorie')
     }
 }
 

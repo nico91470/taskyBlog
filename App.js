@@ -12,8 +12,8 @@ export default function App() {
 
   const [modalVisible, setModalVisible] = useState(false)
 
-  const addTodo = (tache) => {
-    Firebase.addTodos(tache)
+  const addTodo = (tache, categorie) => {
+    Firebase.addTodos(tache, categorie)
     setModalVisible(false)
   }
 
